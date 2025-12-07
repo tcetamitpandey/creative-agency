@@ -1,0 +1,325 @@
+/* ------------------------------------------------------------------ */
+/* SCENE WRAPPER */
+/* ------------------------------------------------------------------ */
+
+.lumos_wrapper {
+  height: 3500px;
+  background: #efefef;
+  overflow-x: hidden;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  position: relative;
+
+  /* perspective: 1800px; */
+  perspective-origin: 50% 15%;
+  text-transform: uppercase;
+  perspective: 9000px;
+  perspective-origin: 50% 20%;
+
+}
+
+/* Smooth transition to next section */
+.lumos_wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, #efefef 0%, rgba(10, 10, 10, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.camera {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  pointer-events: none;    /* optional */
+}
+
+/* ------------------------------------------------------------------ */
+/* 3D CARD BASE (your original style enhanced subtly) */
+/* ------------------------------------------------------------------ */
+
+.card3D {
+  width: 58vw;
+  max-width: 900px;
+  padding: 3rem;
+  margin: 200px auto;
+
+  background: #ffffff;
+  border-radius: 10px;
+
+  transform-style: preserve-3d;
+  will-change: transform;
+
+  /* A softer “printed postcard” look */
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.18),
+    0 8px 20px rgba(0,0,0,0.08);
+
+  /* Subtle paper texture */
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  background-size: 280px;
+
+  transition: transform 0.15s ease-out;
+}
+
+/* ------------------------------------------------------------------ */
+/* POSTCARD-STYLE GRID */
+/* ------------------------------------------------------------------ */
+
+.testimonal_cards_wrapper {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  padding: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* LEFT COLUMN — Matches screenshot structure */
+/* ------------------------------------------------------------------ */
+
+.testimonal_cards_left {
+  width: 32%;
+}
+
+.leftUpper img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  margin-bottom: 0.7rem;
+}
+
+.leftUpper span {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  color: #5a5a5a;
+}
+
+.leftLower span {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------------------------------------------ */
+/* RIGHT COLUMN — print-style typography */
+/* ------------------------------------------------------------------ */
+
+.testimonal_cards_right {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20rem;
+  gap: 1.8rem;
+}
+
+.rightUpper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.rightUpper_msg_body{
+    width: 60%;
+}
+
+/* TITLE (all caps, bold, similar to screenshot) */
+.rightUpper span:nth-child(1) {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+/* Body text (compact print style) */
+.rightUpper span:nth-child(2) {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #2a2a2a;
+  text-transform: none;
+  letter-spacing: 0.3px;
+}
+
+/* Thin divider (screenshot style) */
+.rightUpper::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #111;
+  margin-top: 1.2rem;
+  display: block;
+  opacity: 0.2;
+}
+
+/* ------------------------------------------------------------------ */
+/* TAGS – keep your nice pill style but refine them */
+/* ------------------------------------------------------------------ */
+
+.rightLower {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.testimonial_tags {
+  padding: 0.45rem 1.3rem;
+  background-color: #f1f1f1;
+
+  font-size: 0.78rem;
+  text-transform: uppercase;
+
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.08);
+
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------ */
+/* RESPONSIVE */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 1200px) {
+  .card3D {
+    width: 70vw;
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .lumos_wrapper {
+    height: 3000px;
+  }
+
+  .testimonal_cards_wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .testimonal_cards_left,
+  .testimonal_cards_right {
+    width: 100%;
+  }
+
+  .card3D {
+    width: 85vw;
+    padding: 2rem;
+    margin: 150px auto;
+  }
+
+  .testimonal_cards_right {
+    height: auto;
+    min-height: 15rem;
+  }
+
+  .rightUpper span:nth-child(1) {
+    font-size: 1.2rem;
+  }
+
+  .rightUpper span:nth-child(2) {
+    font-size: 0.8rem;
+  }
+
+  .leftLower span {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .lumos_wrapper {
+    height: 2800px;
+    perspective: 6000px;
+  }
+
+  .card3D {
+    width: 90vw;
+    padding: 1.5rem;
+    margin: 120px auto;
+  }
+
+  .testimonal_cards_wrapper {
+    gap: 1.2rem;
+  }
+
+  .rightUpper {
+    gap: 1.5rem;
+  }
+
+  .rightUpper span:nth-child(1) {
+    font-size: 1.1rem;
+  }
+
+  .rightUpper span:nth-child(2) {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .leftLower span {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .leftUpper img {
+    margin-bottom: 0.5rem;
+  }
+
+  .leftUpper span {
+    font-size: 0.7rem;
+  }
+
+  .testimonial_tags {
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lumos_wrapper {
+    height: 2500px;
+    perspective: 5000px;
+  }
+
+  .card3D {
+    width: 95vw;
+    padding: 1.2rem;
+    margin: 100px auto;
+  }
+
+  .testimonal_cards_wrapper {
+    gap: 1rem;
+  }
+
+  .rightUpper {
+    gap: 1.2rem;
+  }
+
+  .rightUpper span:nth-child(1) {
+    font-size: 1rem;
+  }
+
+  .rightUpper span:nth-child(2) {
+    font-size: 0.7rem;
+    line-height: 1.35;
+  }
+
+  .leftLower span {
+    font-size: 1.1rem;
+  }
+
+  .testimonial_tags {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.65rem;
+  }
+}

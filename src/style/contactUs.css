@@ -1,0 +1,93 @@
+.contactUs_section {
+  padding: 4vw 5vw;
+  margin-top: 0;
+  /* background: #fafafa; */
+  display: flex;
+  justify-content: center;
+  background-image: url("./texture/textured-paper.png");
+}
+
+.contactUs_form {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2vw;
+  font-family: 'Ppneuemontreal', sans-serif;
+  font-size: 4vw;     /* fluid large text */
+  line-height: 1.35;
+  font-weight: 500;
+  color: #161616;
+}
+
+/* Text part of the sentence */
+.contactUs_form p {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  white-space: nowrap;
+}
+
+/* The inline input fields */
+.contactUs_form input {
+  border: none;
+  border-bottom: 0.2vw solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+  padding: 0.3vw 4vw;
+  min-width: 14vw;
+  font-size: .8vw;
+  font-family: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  transition: 0.25s ease;
+}
+
+/* Hover effect */
+.contactUs_form input:hover {
+  cursor: text;
+  border-bottom-color: #000;
+}
+
+/* On focus */
+.contactUs_form input:focus {
+  outline: none;
+  border-bottom-color: #000;
+}
+
+/* Button wrapper pushes button to new line cleanly */
+.contact_button_wrapper {
+  width: 100%;
+  margin-top: 3vw;
+  display: flex;
+}
+
+.contact_button_wrapper button {
+  background: #000;
+  color: #fff;
+  padding: 1vw 3vw;
+  font-size: 1.2vw;
+  border: none;
+  border-radius: 0.3vw;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.contact_button_wrapper button:hover {
+  background: #222;
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin-top: -5px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.status_message {
+  margin-top: 12px;
+  font-weight: bold;
+  color: green;
+}

@@ -1,0 +1,40 @@
+
+.navbar_container{
+    height: 80px;
+    width: 100vw;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    align-items: center;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.navbar_left > span{
+    font-size: 35px;
+    line-height: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar_right{
+    display: flex;
+    gap: 50px;
+    margin-right: 60px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.navbar_right > span{
+    cursor: pointer;
+}
+
+
+.navbar_left_dot{
+    color: blue;
+}

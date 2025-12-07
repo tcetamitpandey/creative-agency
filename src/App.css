@@ -1,0 +1,27 @@
+
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* Global smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure seamless flow - remove gaps between components */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Section wrapper for smooth transitions */
+.section-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

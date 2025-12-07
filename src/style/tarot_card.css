@@ -1,0 +1,198 @@
+/* Wrapper */
+.tarot-wrapper {
+  width: 340px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Card container */
+.tarot-card {
+  width: 340px;
+  height: 520px;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Core structure */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* Shared face styling */
+.card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 18px;
+  overflow: hidden;
+
+  /* Pokémon style border */
+  background: linear-gradient(180deg, #fafafa, #e6e6e6);
+  border: 6px solid #dcdcdc;
+
+  /* Inner glow */
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.45),
+    0 0 12px rgba(255,255,255,0.4) inset;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/****************************************/
+/* ------------ FRONT SIDE ------------ */
+/****************************************/
+
+.card-front {
+  height: 100%;
+}
+
+.card-front img.card-top-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/****************************************/
+/* ------------- BACK SIDE ------------- */
+/****************************************/
+
+.card-back {
+  transform: rotateY(180deg);
+  background: #1a1a1a;
+}
+
+/* Back image = top half */
+.card-back img.card-top-img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: top;
+  filter: brightness(90%);
+}
+
+/* Bottom info */
+.card-bottom {
+  height: 50%;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(3px);
+  color: white;
+}
+
+/* Back info text */
+.back-bottom h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+.back-bottom p {
+  margin: 10px 0;
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.35;
+  overflow: hidden;
+  max-height: 80px;
+}
+
+/* Tags */
+.back-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.tag {
+  background: #303030;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  border: 1px solid #555;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/****************************************/
+/* ------------ HOVER GLOW ------------- */
+/****************************************/
+
+.tarot-card:hover {
+  box-shadow:
+    0 0 25px rgba(255,255,150,0.4),
+    0 0 40px rgba(255,200,80,0.25);
+  transition: box-shadow 0.25s ease;
+}
+
+
+.tarot-card {
+  width: 340px;
+  height: 520px;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.card-inner {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+.tarot-wrapper {
+  width: 340px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px; /* was 40px */
+}
+
+.cards-container {
+  gap: 60px; /* globally between cards */
+}
+
+.card-front-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back .card-top-img {
+  height: 50%;
+  object-fit: cover;
+  margin-top: 1rem;
+  object-position: top;
+}
+
+.card-back .back-bottom {
+  height: 50%;
+  background: linear-gradient(to bottom, #000000aa, #000);
+  padding: 18px;
+}
+
+.card-face {
+  border: 3px solid #f5d200;
+  box-shadow: 0 0 12px #f5d20050, 0 12px 40px rgba(0,0,0,0.6);
+  background: #111;
+}
+
+.tag {
+  background: #e7b251;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 0 6px #ce2a2a80;
+}

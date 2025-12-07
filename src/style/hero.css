@@ -1,0 +1,216 @@
+.hero_section_layout{
+    /* padding top to prevent navabar */
+
+    /* padding-top: 100px; */
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding-bottom: 5rem;
+
+}
+
+.background_effect_of_dot{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-color: #e5e7eb54;
+    background-image: radial-gradient(#e0e0e0 1px, transparent 1.5px);
+    background-size: 20px 20px;
+   
+}
+
+
+.hero_section_conatiner{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+
+}
+
+.hero_section_agency_desc{
+    /* height: 60vh; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.hero_section_agency_desc > span{
+    font-size: 12rem;
+    font-family: 'Anton', sans-serif;
+    font-weight: 900;
+    line-height: 0.8;
+
+}
+
+
+
+.hero_section_agency_title{
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+    font-size: 2rem;
+    line-height: 2rem;
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 3rem;
+    letter-spacing: 10px;
+}
+
+
+.hero_section_about_us{
+    padding-top: 2rem;
+    width: 30vw;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+
+.hero_section_explore_more{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap:0.7rem;
+
+    border: 2px solid black;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.hero_image_right_side{
+    position: absolute;
+    top: 35%;
+    left: 80%;
+    transform: rotate(10deg);
+    box-shadow: 10px 5px 5px black;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero_image_right_side:hover{
+    transform: rotate(15deg);
+}
+
+
+.hero_image_right_side > img{
+    object-fit: contain;
+    height: 12rem;
+    width: 8rem;
+
+}
+
+.hero_image_left_side{
+    position: absolute;
+    min-height: 6rem;
+    min-width: 6rem;
+    padding: 1.5rem 2rem;
+    top: 23%;
+    left: 05%;
+    transform: rotate(-20deg);
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.2),
+        0 5px 15px rgba(59, 130, 246, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    color: white;
+    border-radius: 12px;
+    transition: transform 0.7s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero_image_left_side:hover{
+    transform: rotate(0deg);
+}
+
+.hero_image_left_side span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+.hero_section_things {
+  font-size: 170px;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 4px;
+  cursor: pointer;
+  position: relative;
+  color: transparent;
+  background: repeating-linear-gradient(
+    to bottom,
+    #000 0,
+    #000 3px,
+    transparent 3px,
+    transparent 8px
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition:
+    background-position 0.25s ease,
+    transform 0.35s cubic-bezier(0.25, 1.4, 0.4, 1),
+    filter 0.3s ease;
+}
+
+/* Hover: playful pop */
+.hero_section_things:hover {
+  background-position: 0 10px;
+  transform: rotate(-1deg) scale(1.08);
+  filter: brightness(1.25);
+}
+
+/* Glow / creative spark overlay on hover */
+.hero_section_things:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+
+  /* golden glow gradient */
+  background: radial-gradient(
+    circle at 50% 50%, 
+    #fff3c0 0%, 
+    #ffd700 30%, 
+    #ff9900 60%, 
+    #ff6600 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  opacity: 0.7;
+  mix-blend-mode: screen;
+
+  animation: glowSpark 1s infinite alternate, subtleFlicker 0.8s infinite alternate;
+}
+
+/* soft chaotic spark movement */
+@keyframes glowSpark {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  25%  { transform: translate(2px, -1px) scale(1.02); }
+  50%  { transform: translate(-1px, 1px) scale(1.03); }
+  75%  { transform: translate(1px, -2px) scale(1.01); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+/* subtle flicker for the "bulb on" effect */
+@keyframes subtleFlicker {
+  0%   { opacity: 0.6; filter: brightness(1); }
+  50%  { opacity: 0.8; filter: brightness(1.2); }
+  100% { opacity: 0.7; filter: brightness(1.1); }
+}
+
