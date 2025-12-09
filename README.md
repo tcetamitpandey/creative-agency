@@ -1,16 +1,54 @@
-# React + Vite
+# Creative Agency — Agency/Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+> ⚠️ **Important Notice (Please Read)**  
+> This project has been **developed and sold to a private client**.  
+> The version published here on GitHub is **strictly for portfolio and educational showcase purposes only**.  
+> **Commercial use, redistribution, resale, or repackaging of this code is NOT permitted.**  
+> If you wish to use or adapt any part of it for business/commercial projects, please contact me for proper licensing and permissions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+A modern, responsive creative-agency website built with React + Vite + CSS — featuring interactive sections, horizontal/vertical scroll effects, testimonial cards, contact form, and more. Perfect for freelancers, digital studios or agencies looking for a clean web presence.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- ✅ Fully responsive layout — works across desktop, tablet and mobile.  
+- 🎨 Hero / Dual-cube section with scroll-driven 3D cube rotation (desktop/tablet) or stacked layout (mobile).  
+- 💬 Testimonial section with “flying card” animation on scroll (desktop), fallback to vertical stacked cards on mobile.  
+- 🔄 Horizontal scroll / showcase section (e.g. portfolio/cards) for interactive content flow.  
+- 📩 Contact form using [EmailJS](https://www.emailjs.com) with validation.  
+- 🖤 Clean, modern UI / UX.  
+- 📄 Semantic HTML + CSS (with modular structure) + React with functional components & hooks.  
+
+---
+
+## Demo / Live Preview
+
+> `creative-agency-ashy.vercel.app`
+
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or above recommended)  
+- npm or yarn  
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/tcetamitpandey/creative-agency.git
+
+# Change directory
+cd creative-agency
+
+# Install dependencies
+npm install
+# or
+yarn install
