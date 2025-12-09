@@ -7,6 +7,7 @@
     width: 100vw;
     overflow: hidden;
     padding-bottom: 5rem;
+    
 
 }
 
@@ -218,7 +219,8 @@
 
 @media (max-width : 900px) {
     .hero_section_layout{
-        
+        height: min-content;
+        padding-top: 2rem;
     }
 
     .hero_image_right_side{
