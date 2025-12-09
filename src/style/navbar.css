@@ -106,7 +106,9 @@
   .navbar_left span {
     font-size: 30px;
   }
+  
 }
+
 
 @media (max-width: 600px) {
   .navbar_right {

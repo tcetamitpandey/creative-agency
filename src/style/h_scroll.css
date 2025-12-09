@@ -30,8 +30,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: #111;
 }
 
 /* Motion container */
@@ -63,5 +61,13 @@
     .h_scroll_motion_div {
         gap: 3rem;
         padding: 0 2rem;
+    }
+
+    .h_scroll_container{
+        padding-top: 20vh;
+    }
+
+    .h_scroll_end_text{
+        margin-left: 20vw;
     }
 }

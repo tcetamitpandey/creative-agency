@@ -98,72 +98,66 @@ export default function ContactUs() {
   return (
     <section className="contactUs_section">
       <form className="contactUs_form" onSubmit={handleContactUsForm}>
-        <p>Hello! I'm</p>
-        <input
-          type="text"
-          name="user_name"
-          value={userDetails.user_name}
-          placeholder="[YOUR NAME]"
-          onChange={handle_form_value_change}
-        />
-        {errors.user_name && <span className="error">{errors.user_name}</span>}
+    <div className="contactUs_desktop">
+      <p>Hello! I'm</p>
+      <input type="text" name="user_name" value={userDetails.user_name} placeholder="[YOUR NAME]" onChange={handle_form_value_change} />
+      {errors.user_name && <span className="error">{errors.user_name}</span>}
 
-        <p>and I'm contacting you from</p>
-        <input
-          type="text"
-          name="user_company"
-          value={userDetails.user_company}
-          placeholder="[COMPANY NAME]"
-          onChange={handle_form_value_change}
-        />
-        {errors.user_company && <span className="error">{errors.user_company}</span>}
+      <p>and I'm contacting you from</p>
+      <input type="text" name="user_company" value={userDetails.user_company} placeholder="[COMPANY NAME]" onChange={handle_form_value_change} />
+      {errors.user_company && <span className="error">{errors.user_company}</span>}
 
-        <p>as the</p>
-        <input
-          type="text"
-          name="user_position"
-          value={userDetails.user_position}
-          placeholder="[POSITION]"
-          onChange={handle_form_value_change}
-        />
-        {errors.user_position && <span className="error">{errors.user_position}</span>}
+      <p>as the</p>
+      <input type="text" name="user_position" value={userDetails.user_position} placeholder="[POSITION]" onChange={handle_form_value_change} />
+      {errors.user_position && <span className="error">{errors.user_position}</span>}
 
-        <p>My phone number is</p>
-        <input
-          type="text"
-          name="user_number"
-          value={userDetails.user_number}
-          placeholder="[CONTACT NUMBER]"
-          onChange={handle_form_value_change}
-        />
-        {errors.user_number && <span className="error">{errors.user_number}</span>}
+      <p>My phone number is</p>
+      <input type="text" name="user_number" value={userDetails.user_number} placeholder="[CONTACT NUMBER]" onChange={handle_form_value_change} />
+      {errors.user_number && <span className="error">{errors.user_number}</span>}
 
-        <p>and email</p>
-        <input
-          type="email"
-          name="user_email"
-          value={userDetails.user_email}
-          placeholder="[EMAIL]"
-          onChange={handle_form_value_change}
-        />
-        {errors.user_email && <span className="error">{errors.user_email}</span>}
+      <p>and email</p>
+      <input type="email" name="user_email" value={userDetails.user_email} placeholder="[EMAIL]" onChange={handle_form_value_change} />
+      {errors.user_email && <span className="error">{errors.user_email}</span>}
 
-        <p>I’m looking to get your help with</p>
-        <input
-          type="text"
-          name="user_request"
-          value={userDetails.user_request}
-          placeholder="[REQUEST]"
-          onChange={handle_form_value_change}
-        />
-        {errors.user_request && <span className="error">{errors.user_request}</span>}
+      <p>I’m looking to get your help with</p>
+      <input type="text" name="user_request" value={userDetails.user_request} placeholder="[REQUEST]" onChange={handle_form_value_change} />
+      {errors.user_request && <span className="error">{errors.user_request}</span>}
+    </div>
 
-        <div className="contact_button_wrapper">
-          <button type="submit">GET IN TOUCH</button>
-        </div>
+  {/* MOBILE STACKED VERSION */}
+  <div className="contactUs_mobile">
+    <label>Name</label>
+    <input type="text" name="user_name" value={userDetails.user_name} placeholder="Your Name" onChange={handle_form_value_change} />
+    {errors.user_name && <span className="error">{errors.user_name}</span>}
 
-        {statusMessage && <p className="status_message">{statusMessage}</p>}
-      </form>
+    <label>Company</label>
+    <input type="text" name="user_company" value={userDetails.user_company} placeholder="Company Name" onChange={handle_form_value_change} />
+    {errors.user_company && <span className="error">{errors.user_company}</span>}
+
+    <label>Position</label>
+    <input type="text" name="user_position" value={userDetails.user_position} placeholder="Position" onChange={handle_form_value_change} />
+    {errors.user_position && <span className="error">{errors.user_position}</span>}
+
+    <label>Phone</label>
+    <input type="text" name="user_number" value={userDetails.user_number} placeholder="Contact Number" onChange={handle_form_value_change} />
+    {errors.user_number && <span className="error">{errors.user_number}</span>}
+
+    <label>Email</label>
+    <input type="email" name="user_email" value={userDetails.user_email} placeholder="Email Address" onChange={handle_form_value_change} />
+    {errors.user_email && <span className="error">{errors.user_email}</span>}
+
+    <label>Request</label>
+    <textarea name="user_request" value={userDetails.user_request} placeholder="How can we help?" onChange={handle_form_value_change} />
+    {errors.user_request && <span className="error">{errors.user_request}</span>}
+  </div>
+
+  <div className="contact_button_wrapper">
+    <button type="submit">GET IN TOUCH</button>
+  </div>
+
+  {statusMessage && <p className="status_message">{statusMessage}</p>}
+</form>
+
     </section>
   );
 }

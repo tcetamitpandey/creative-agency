@@ -196,3 +196,11 @@
   font-weight: 600;
   box-shadow: 0 0 6px #ce2a2a80;
 }
+
+
+@media (max-width : 900px){
+  .tarot-wrapper{
+    width: 270px;
+  }
+
+}

@@ -35,7 +35,6 @@
 }
 
 .hero_section_agency_desc{
-    /* height: 60vh; */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -67,7 +66,7 @@
 .hero_section_about_us{
     padding-top: 2rem;
     width: 30vw;
-    padding-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 1rem;
 }
 
@@ -77,6 +76,7 @@
     display: flex;
     justify-content: center;
     gap:0.7rem;
+    margin-bottom: 20px;
 
     border: 2px solid black;
     border-radius: 50px;
@@ -214,3 +214,50 @@
   100% { opacity: 0.7; filter: brightness(1.1); }
 }
 
+/*  Media Query  */
+
+@media (max-width : 900px) {
+    .hero_section_layout{
+        
+    }
+
+    .hero_image_right_side{
+        display: none;
+    }
+
+    .hero_image_left_side{
+        display: none;
+    }
+
+}
+
+
+
+@media (max-width : 600px  ){
+    .hero_section_agency_title{
+       width: 80%;
+       font-size: 1.3rem;
+    }
+
+    .hero_section_agency_desc > span{
+        font-size: 8.5rem;
+        font-weight: 900;
+        line-height: 1.001;
+
+    }
+
+    .hero_section_about_us{
+        width: 50vw;
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media (max-width : 400px  ){
+    .hero_section_agency_desc > span{
+        font-size: 7rem;
+        font-weight: 900;
+        line-height: 1.001;
+
+    }
+}

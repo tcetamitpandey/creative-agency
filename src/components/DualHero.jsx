@@ -39,21 +39,48 @@ const teamMembers = [
 
 const DualHero = () => {
   const [scrollY, setScrollY] = useState(0);
-  const containerRef = useRef(null);
-
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const vh = window.innerHeight;
-    const rotationPerVh = 90;
-    const rotation = (scrollTop / vh) * rotationPerVh;
-    setScrollY(rotation);
-  };
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const update = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
+  useEffect(() => {
+    if (isMobile) return; // disable cube scrolling on mobile
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const vh = window.innerHeight;
+      const rotationPerVh = 90;
+      const rotation = (scrollTop / vh) * rotationPerVh;
+      setScrollY(rotation);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMobile]);
+
+  // MOBILE VERSION -------------------------------------------------------
+  if (isMobile) {
+    return (
+      <div className="mobile-team-container">
+        {teamMembers.map((m) => (
+          <div className="mobile-member-block" key={m.id}>
+            <img src={m.imageUrl} alt={m.name} className="mobile-member-image" />
+
+            <div className="mobile-member-text">
+              <h2>{m.name}</h2>
+              {m.role && <h3>[{m.role}]</h3>}
+              {m.quote && <p className="mobile-quote">{m.quote}</p>}
+              <p className="mobile-bio">{m.bio}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  // DESKTOP / TABLET VERSION ----------------------------------------------
   const imageFaces = teamMembers.map((member) => ({
     content: (
       <div className="cube-image-face">
@@ -61,7 +88,6 @@ const DualHero = () => {
         <div className="cube-image-overlay"></div>
       </div>
     ),
-    style: {},
   }));
 
   const textFaces = teamMembers.map((member) => ({
@@ -69,17 +95,14 @@ const DualHero = () => {
       <div className="cube-text-content">
         <h2 className="cube-name">{member.name}</h2>
         {member.role && <h3 className="cube-role">[{member.role}]</h3>}
-        {member.quote && (
-          <p className="cube-quote">{member.quote}</p>
-        )}
+        {member.quote && <p className="cube-quote">{member.quote}</p>}
         <p className="cube-bio">{member.bio}</p>
       </div>
     ),
-    style: {},
   }));
 
   return (
-    <div className="dual-hero-container" ref={containerRef}>
+    <div className="dual-hero-container">
       <div className="dual-hero-wrapper">
         <div className="cube-wrapper">
           <CubeFace faces={textFaces} rotationX={scrollY} />

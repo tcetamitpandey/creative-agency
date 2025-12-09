@@ -1,6 +1,6 @@
 .why-us-container {
   min-height: 100vh;
-  width: 100%;
+  /* width: 100%; */
   background: #0a0a0a;
   position: relative;
   padding: 8rem 4rem 4rem;
@@ -169,7 +169,12 @@
   );
 }
 
+
+
+
 /* Responsive */
+
+
 @media (max-width: 1200px) {
   .why-us-container {
     padding: 6rem 3rem 3rem;
@@ -232,5 +237,6 @@
   .polaroid-image {
     height: 300px;
   }
+
 }
 

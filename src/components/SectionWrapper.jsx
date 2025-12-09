@@ -4,6 +4,9 @@ export default function SectionWrapper({ children, className = '' }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
+  // use to give animation feel when user enter that particular componet this componet is moving upward when the componet 
+  // is seen that is threshold of 10%
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {

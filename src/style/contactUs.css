@@ -91,3 +91,59 @@
   font-weight: bold;
   color: green;
 }
+
+
+/* Hide mobile version on desktop */
+.contactUs_mobile {
+  display: none;
+}
+
+/* Show mobile version + hide inline sentence version */
+@media (max-width: 768px) {
+  .contactUs_desktop {
+    display: none;
+  }
+
+  .contactUs_mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+  .contactUs_mobile label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .contactUs_mobile input,
+  .contactUs_mobile textarea {
+    /* width: 100%; */
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-transform: none;
+    letter-spacing: 0.2px;
+    background: white;
+  }
+
+  .contactUs_mobile textarea {
+    min-height: 110px;
+    resize: vertical;
+  }
+
+  .contact_button_wrapper button {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  .contactUs_section {
+    padding: 8vw 6vw;
+  }
+}

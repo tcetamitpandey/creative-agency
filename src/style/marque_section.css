@@ -2,12 +2,11 @@
 .marquee_tilted_wrapper{
     transform: rotate(-1deg);
     overflow: hidden;
-    /* border-top: 5px solid rgb(250 204 21 / var(--tw-text-opacity, 1));
-    border-bottom: 5px solid rgb(250 204 21 / var(--tw-text-opacity, 1)); */
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 0;
     margin-bottom: 0;
+
 
     width: 110%;
     left: -2.5%;
@@ -89,3 +88,20 @@
     background-color: rgb(250 204 21 / var(--tw-text-opacity, 1));
     border-radius: 80px;
 } */
+
+
+
+@media (max-width : 900px){
+
+    .marquee_tilted_wrapper{
+        width: 100vw;
+    }
+
+    .marque_section_container > span{
+        font-size: 3rem;
+        line-height: 1;
+        font-weight: 800;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
