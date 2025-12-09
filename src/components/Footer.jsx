@@ -9,7 +9,7 @@ export default function Footer() {
 
         <p className="footer-right">
           Made with <FaHeart className="heart" /> by 
-          <a href="https://your-link.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/amit-pandey-tcet" target="_blank" rel="noopener noreferrer">
             &nbsp;Amit Pandey
           </a>
         </p>
