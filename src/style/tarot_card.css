@@ -101,7 +101,7 @@
 
 .back-bottom p {
   margin: 10px 0;
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.9;
   line-height: 1.35;
   overflow: hidden;
@@ -183,13 +183,13 @@
 }
 
 .card-face {
-  border: 3px solid #f5d200;
-  box-shadow: 0 0 12px #f5d20050, 0 12px 40px rgba(0,0,0,0.6);
+  border: 3px solid var(--maroon);
+  box-shadow: 0 0 12px #f5d20050, 0 12px 40px var(--maroon);
   background: #111;
 }
 
 .tag {
-  background: #e7b251;
+  background: var(--cherry);
   color: white;
   padding: 6px 12px;
   border-radius: 8px;

@@ -3,7 +3,7 @@
 
     /* padding-top: 100px; */
     position: relative;
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     overflow: hidden;
     padding-bottom: 5rem;
@@ -43,10 +43,10 @@
 
 
 .hero_section_agency_desc > span{
-    font-size: 12rem;
+    font-size: 9rem;
     font-family: 'Anton', sans-serif;
     font-weight: 900;
-    line-height: 0.8;
+    line-height: 1;
 
 }
 
@@ -85,6 +85,7 @@
 }
 
 .hero_image_right_side{
+    display: none;
     position: absolute;
     top: 35%;
     left: 80%;
@@ -139,6 +140,13 @@
     text-transform: uppercase;
 }
 
+.hero_section_title_extra span{
+    font-size: 120px;
+}
+
+.hero_section_title_extra_result{
+    color: var(--maroon);
+}
 
 .hero_section_things {
   font-size: 170px;
@@ -151,8 +159,8 @@
   color: transparent;
   background: repeating-linear-gradient(
     to bottom,
-    #000 0,
-    #000 3px,
+    var(--maroon) 0,
+    var(--maroon) 3px,
     transparent 3px,
     transparent 8px
   );

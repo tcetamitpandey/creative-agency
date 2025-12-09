@@ -4,8 +4,12 @@ import '../style/whyUs.css';
 const whyUsCards = [
   {
     id: 1,
-    title: "WE ARE ALWAYS NEW",
-    description: "WE ARE ALWAYS READY TO UNDERSTAND YOUR NEEDS AND COME UP WITH A QUICK AND EFFECTIVE SOLUTION",
+    title: "What you get:",
+    description: `– Practical strategy
+– Distinctive creative
+– Consistent communication
+– A dedicated team
+– Transparent workflows`,
     color: "#a8d5ff",
     textColor: "#000",
     position: { x: 50, y: 100 },
@@ -14,8 +18,8 @@ const whyUsCards = [
   },
   {
     id: 2,
-    title: "WE CREATE WORLDLY",
-    description: "OUR CREATIVES TRANSCEND BOUNDARIES AND SPEAK A UNIVERSAL LANGUAGE OF EXCELLENCE",
+    title: "We Don't Care - Kya kahenge chaar log",
+    description: "We simply focus on doing the work well  -  every time.",
     color: "#ffb3d9",
     textColor: "#fff",
     position: { x: 250, y: 50 },
@@ -24,8 +28,8 @@ const whyUsCards = [
   },
   {
     id: 3,
-    title: "WE ARE PLAYING THE LONG GAME",
-    description: "OUR CLIENTS STAY WITH US, CONTINUING TO GROW THEIR BUSINESSES FOR YEARS",
+    title: "Where will you get a team like us?",
+    description: "We focus on combining clarity, creativity, and structured thinking into every project we handle.",
     color: "#ffb3d9",
     textColor: "#fff",
     position: { x: 500, y: 150 },
@@ -34,8 +38,12 @@ const whyUsCards = [
   },
   {
     id: 4,
-    title: "WE ARE FOR A COMPREHENSIVE APPROACH",
-    description: "WE SELECT THE OPTIMAL SET OF SERVICES SPECIFICALLY FOR YOUR NEEDS TO DELIVER MAXIMUM RESULTS IN A SHORT TIME",
+    title: "What you don’t get:",
+    description: `– Excessive jargon\n
+– Endless revisions
+– Template-based work
+– Overpromising
+– Unnecessary complexity`,
     color: "#a8d5ff",
     textColor: "#000",
     position: { x: 100, y: 350 },

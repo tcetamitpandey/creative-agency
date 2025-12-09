@@ -12,30 +12,36 @@ export default function H_scroll() {
     {
       card_index : 1,
       image_url : './tarot/card1.png',
-      title : "PlaceHolder 1",
-      tags : ['creative', 'magic', 'inspiration'],
-      desc : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem cumque deleniti ut dolor vero commodi."
+      title : "Brand Development & Identity Refresh",
+      tags : ['Brand Development', 'Identity'],
+      desc : `We transform your brand into something clear, consistent, and value-driven.
+We ensure it stands out where it matters most.
+Brand building becomes a smooth, strategic process.`
     },
     {
       card_index : 2,
       image_url : './tarot/card2.png',
-      title : "PlaceHolder 2",
-      tags : ['creative', 'magic', 'inspiration'],
-      desc : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem cumque deleniti ut dolor vero commodi."
+      title : "Influencer Marketing",
+      tags : ['Influencer' ,'inspiration'],
+      desc : `We collaborate with individuals and creators who genuinely align with your audience.
+ No forced messaging - just authentic narratives that build trust and connection.`
     },
     {
       card_index : 3,
       image_url : './tarot/card3.png',
-      title : "PlaceHolder 3",
-      tags : ['creative', 'magic', 'inspiration'],
-      desc : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem cumque deleniti ut dolor vero commodi."
+      title : "Paid Media",
+      tags : ['data driven', 'measurable results'],
+      desc : `We design and run data-backed digital initiatives that:
+Clear insights, strong creative, measurable results.`
     },
     {
       card_index : 4,
       image_url : './tarot/card4.png',
-      title : "PlaceHolder 4",
-      tags : ['creative', 'magic', 'inspiration'],
-      desc : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem cumque deleniti ut dolor vero commodi."
+      title : "Campaign Strategy",
+      tags : ['Strategy', 'storytelling', 'recall'],
+      desc : `We develop campaign ideas that:
+Reflect your positioning, Capture attention, Strengthen recall & Encourage interaction
+Strong storytelling meets thoughtful execution.`
     },
   ]
 

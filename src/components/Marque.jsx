@@ -13,10 +13,10 @@ export default function Marque_Section(){
 
             <Marquee speed={150} pauseOnHover={true} gradient={false} >
                 <div  className="marque_section_container">
-                    <span className="marquee_1" >Let's Create Magic •</span>
-                    <span className="marquee_2" >Design That Works •</span>
-                    <span className="marquee_3">No Boring Stuff •</span>
-                    <span className="marquee_4">Bold Ideas •</span>
+                    <span className="marquee_1" >Brands can blend in •</span>
+                    <span className="marquee_2" >We help them stand out •</span>
+                    <span className="marquee_3">Our approach is simple: </span>
+                    <span className="marquee_4">purposeful creativity without unnecessary complication •</span>
                 </div>
             </Marquee>
 
