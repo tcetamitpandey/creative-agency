@@ -16,56 +16,54 @@ import WhyUs from './components/WhyUs'
 import DualHero from './components/DualHero'
 import Footer from './components/Footer'
 
+
 function App() {
-  const [count, setCount] = useState(0)
-
-  document.querySelectorAll("*").forEach(el => {
-  const styles = getComputedStyle(el);
-  if (
-    styles.overflow !== "visible" ||
-    styles.transform !== "none" ||
-    styles.filter !== "none" ||
-    styles.opacity !== "1"
-  ) {
-    console.log("⚠️ 3D Breaker →", el, styles.overflow, styles.transform, styles.filter, styles.opacity);
-  }
-});
-
-
   return (
     <>
       <CustomCursor />
       <Navbar />
-      <Hero />
-      <SectionWrapper>
+
+      <section id="home">
+        <Hero />
+      </section>
+
+      <SectionWrapper id="marque">
         <Marque_Section />
       </SectionWrapper>
-      <SectionWrapper>
-        <H_scroll />
-      </SectionWrapper>
-      {/* <SectionWrapper>
-        <Temp placeholdertext= {'Start'} />
-      </SectionWrapper> */}
-      
-      <SectionWrapper>
-        <WhyUs />
-      </SectionWrapper>
-      <SectionWrapper>
-        <DualHero />
-      </SectionWrapper>
-      <SectionWrapper>
-        <Testimonials />
-      </SectionWrapper>
 
-      <SectionWrapper>
-        <ContactUs />
-      </SectionWrapper>
-      
-      {/* < Temp placeholdertext= {'End'} /> */}
+      <section id="service">
+        <SectionWrapper>
+          <H_scroll />
+        </SectionWrapper>
+      </section>
+
+      <section id="whyus">
+        <SectionWrapper>
+          <WhyUs />
+        </SectionWrapper>
+      </section>
+
+      <section id="process">
+        <SectionWrapper>
+          <DualHero />
+        </SectionWrapper>
+      </section>
+
+      <section id="about">
+        <SectionWrapper>
+          <Testimonials />
+        </SectionWrapper>
+      </section>
+
+      <section id="contact">
+        <SectionWrapper>
+          <ContactUs />
+        </SectionWrapper>
+      </section>
+
       <Footer />
-      
     </>
-  )
+  );
 }
 
 export default App
