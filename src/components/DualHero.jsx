@@ -1,40 +1,47 @@
 import React, { useEffect, useState, useRef } from "react";
 import CubeFace from "./CubeFace";
 import "../style/cubeFace.css";
-
 const teamMembers = [
   {
-    id: 1,
-    name: "ALINA",
-    role: "CEO",
-    quote: "AS THE CEO OF LUMOS, I UNDERSTAND THE RESPONSIBILITY THAT FALLS ON MY SHOULDERS EACH DAY.",
-    bio: "HOWEVER I AM NOT AFRAID BECAUSE EVERY MEMBER OF OUR TEAM IS A TRUE PROFESSIONAL FULLY TRUSTWORTHY AND DEDICATED TO THEIR WORK. THEIR EXPERTISE AND COMMITMENT GIVE ME THE CONFIDENCE THAT WE WILL CONSISTENTLY DELIVER OUTSTANDING RESULTS. TOGETHER WE STRIVE TO EXCEED EXPECTATIONS AND DRIVE SUCCESS FOR OUR CLIENTS.",
+    id: 3,
+    name: "STEP 3",
+    role: "Strategy & Ideation",
+    quote: "Insights from discovery and evaluation are transformed into a clear, actionable strategy.",
+    bio: `We define a structured direction that aligns with your brand vision and business goals.
+Creative ideas are developed with purpose, not guesswork, ensuring relevance and impact.
+Every concept is designed to communicate clearly, connect emotionally, and drive results.`,
     imageUrl: "https://picsum.photos/600/800?random=1",
   },
   {
     id: 2,
-    name: "DARY",
-    role: "FOUNDER",
-    quote: "",
-    bio: "I CREATED THIS COMPANY BECAUSE AS A LITTLE GIRL I WANTED TO EARN BY INCREASING PEOPLE'S INCOME NOT BY TAKING IT AWAY FROM THEM.",
+    name: "STEP 2",
+    role: "Evaluation",
+    quote: "We assess your existing brand presence, communication, and performance across all touchpoints",
+    bio: `What’s working is identified and strengthened to build on proven success.
+What’s not delivering results is analyzed to understand gaps and inefficiencies.
+Clear opportunities for improvement are defined, setting the stage for smarter, more effective solutions.`,
     imageUrl: "https://picsum.photos/600/800?random=2",
   },
   {
-    id: 3,
-    name: "ALINA",
-    role: "CEO",
-    quote: "AS THE CEO OF LUMOS, I UNDERSTAND THE RESPONSIBILITY THAT FALLS ON MY SHOULDERS EACH DAY.",
-    bio: "HOWEVER I AM NOT AFRAID BECAUSE EVERY MEMBER OF OUR TEAM IS A TRUE PROFESSIONAL FULLY TRUSTWORTHY AND DEDICATED TO THEIR WORK. THEIR EXPERTISE AND COMMITMENT GIVE ME THE CONFIDENCE THAT WE WILL CONSISTENTLY DELIVER OUTSTANDING RESULTS. TOGETHER WE STRIVE TO EXCEED EXPECTATIONS AND DRIVE SUCCESS FOR OUR CLIENTS.",
+    id: 1,
+    name: "STEP 1",
+    role: "Discovery",
+    quote: "We begin by deeply understanding your brand its vision, values, personality, and market position.",
+    bio: `Your challenges are carefully analyzed to uncover real gaps, obstacles, and growth opportunities.
+We clearly define your business and communication goals to align creativity with results.
+This phase builds a strong foundation, ensuring every strategy and decision is intentional and effective.`,
     imageUrl: "https://picsum.photos/600/800?random=1",
   },
   {
     id: 4,
-    name: "DARY",
-    role: "FOUNDER",
-    quote: "",
-    bio: "I CREATED THIS COMPANY BECAUSE AS A LITTLE GIRL I WANTED TO EARN BY INCREASING PEOPLE'S INCOME NOT BY TAKING IT AWAY FROM THEM.",
+    name: "STEP 4",
+    role: "Execution & Optimization",
+    quote: "Ideas are brought to life with precision, ensuring clarity, consistency, and quality at every touchpoint.",
+    bio: `Each element is executed in alignment with the defined strategy and brand direction.
+Performance is continuously monitored using data-driven insights and real metrics.
+Based on results, we refine, optimize, and improve to maximize impact and long-term effectiveness`,
     imageUrl: "https://picsum.photos/600/800?random=2",
-  },
+  }
 ];
 
 const DualHero = () => {

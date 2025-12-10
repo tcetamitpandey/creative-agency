@@ -29,6 +29,7 @@
 /* ===================== CUBE =========================== */
 .cube-wrapper {
   perspective: 1000px;
+
 }
 
 .cube-container {
@@ -126,6 +127,7 @@
 .cube-text-content {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-around; */
   gap: 1.2rem;
   padding: 2.5rem 2.5rem 2.5rem 3.5rem;
   color: #fff;
@@ -159,7 +161,7 @@
 }
 
 .cube-bio {
-  margin-top: auto;
+  /* margin-top: auto; */
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.7rem;
   line-height: 1.8;
