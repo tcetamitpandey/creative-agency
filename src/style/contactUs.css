@@ -92,6 +92,14 @@
   color: green;
 }
 
+input{
+  font-size: clamp(1.3rem , 3.5vw, 2rem ) !important;
+  color: #222;
+}
+
+::placeholder{
+  font-size: 0.8rem;
+}
 
 /* Hide mobile version on desktop */
 .contactUs_mobile {
