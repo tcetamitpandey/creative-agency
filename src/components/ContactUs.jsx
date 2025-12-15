@@ -3,6 +3,11 @@ import emailjs from "@emailjs/browser";
 import "../style/contactUs.css";
 
 export default function ContactUs() {
+
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  
   const [userDetails, setUserDetails] = useState({
     user_name: "",
     user_company: "",
@@ -58,10 +63,10 @@ export default function ContactUs() {
 
     try {
       const response = await emailjs.send(
-        "service_yarmy4z",
-        "template_daqhrdx",
+        SERVICE_ID,
+        TEMPLATE_ID,
         userDetails,
-        "y65WhCpW3xViHVQQY"
+        PUBLIC_KEY
       );
 
       setStatusMessage("Your message has been sent successfully!");
