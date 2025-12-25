@@ -197,10 +197,89 @@
   box-shadow: 0 0 6px #ce2a2a80;
 }
 
+.no-motion {
+  transform: none !important;
+  perspective: none !important;
+}
+
+.mobile-card {
+  transform: none !important;
+  perspective: none !important;
+}
+
+.mobile-card .card-face {
+  position: relative;
+  backface-visibility: visible;
+}
+
+@media (max-width: 900px) {
+  .tarot-card {
+    transform: none !important;
+  }
+}
+
+
+.mobile-card {
+  transform: none !important;
+  perspective: none !important;
+  height: auto;
+}
+
+
 
 @media (max-width : 900px){
+
+  .tarot-card {
+    transform: none !important;
+    perspective: none;
+  }
+
   .tarot-wrapper{
     width: 270px;
   }
 
+}
+
+
+/* ===============================
+   📱 MOBILE CARD FIX
+================================ */
+
+.mobile-card {
+  perspective: none !important;
+  transform: none !important;
+  height: 520px;              /* keep card proportion */
+}
+
+.mobile-face {
+  position: relative;
+  inset: 0;
+  backface-visibility: visible;
+  transform: none !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image stays inside card */
+.mobile-face .card-top-img {
+  width: 100%;
+  height: 50%;                /* same as desktop back */
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* Info area behaves like a card */
+.mobile-face .card-bottom {
+  height: 50%;
+  overflow: hidden;
+}
+
+
+@media (max-width: 900px) {
+  .tarot-card {
+    width: 280px;
+    height: 460px;
+  }
 }

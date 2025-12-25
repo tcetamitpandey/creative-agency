@@ -43,17 +43,17 @@ function App() {
         </SectionWrapper>
       </section>
 
-      <section id="process">
+      <section id="about">
         <SectionWrapper>
           <DualHero />
         </SectionWrapper>
       </section>
 
-      <section id="about">
+      {/* <section id="about">
         <SectionWrapper>
           <Testimonials />
         </SectionWrapper>
-      </section>
+      </section> */}
 
       <section id="contact">
         <SectionWrapper>

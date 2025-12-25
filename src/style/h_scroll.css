@@ -39,6 +39,9 @@
 /* --- MOBILE FIXES --- */
 @media (max-width: 900px) {
   .h_scroll_motion_div {
+    transform : none;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     padding: 0 1rem;
   }
@@ -52,5 +55,25 @@
     width: 80vw;
     margin-left: 0;
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .h_scroll_wrapper {
+    height: auto;          /* 🔑 remove 700vh */
+  }
+
+  .h_scroll_container {
+    position: relative;    /* 🔑 disable sticky */
+    height: auto;
+    overflow: visible;
+    padding: 4rem 0;
+  }
+
+  .h_scroll_motion_div {
+    transform: none !important;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 1rem;
   }
 }

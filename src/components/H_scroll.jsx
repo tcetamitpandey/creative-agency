@@ -1,17 +1,37 @@
 
 import { useRef } from "react";
+import { useEffect, useState } from "react";
+
 import "../style/h_scroll.css"
 import {motion ,useTransform, useScroll } from "framer-motion"
 
 import TarotCard from "./TarotCard";
 
+function useIsMobile(breakpoint = 900) {
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth <= breakpoint
+  );
+
+  useEffect(() => {
+    const resize = () => setIsMobile(window.innerWidth <= breakpoint);
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
 
 export default function H_scroll() {
+
+  const isMobile = useIsMobile();
+
 
   const cards_content = [
     {
       card_index : 1,
       image_url : './tarot/card1.png',
+      back_img_url : "./tarot/torat1.jpg",
       title : "Brand Development & Identity Refresh",
       tags : ['Brand Development', 'Identity'],
       desc : `We transform your brand into something clear, consistent, and value-driven.
@@ -21,6 +41,7 @@ Brand building becomes a smooth, strategic process.`
     {
       card_index : 2,
       image_url : './tarot/card2.png',
+      back_img_url : "./tarot/torat2.jpg",
       title : "Influencer Marketing",
       tags : ['Influencer' ,'inspiration'],
       desc : `We collaborate with individuals and creators who genuinely align with your audience.
@@ -29,6 +50,7 @@ Brand building becomes a smooth, strategic process.`
     {
       card_index : 3,
       image_url : './tarot/card3.png',
+      back_img_url : "./tarot/torat3.jpg",
       title : "Paid Media",
       tags : ['data driven', 'measurable results'],
       desc : `We design and run data-backed digital initiatives that:
@@ -37,6 +59,7 @@ Clear insights, strong creative, measurable results.`
     {
       card_index : 4,
       image_url : './tarot/card4.png',
+      back_img_url : "./tarot/torat4.jpg",
       title : "Campaign Strategy",
       tags : ['Strategy', 'storytelling', 'recall'],
       desc : `We develop campaign ideas that:
@@ -59,27 +82,28 @@ Strong storytelling meets thoughtful execution.`
     {/* <div style={{height :"100vh", backgroundColor :"#111"}} ></div> */}
     <section className="h_scroll_wrapper" ref={target_ref} >
       <div className="h_scroll_container">
-          <motion.div style={{x}} className="h_scroll_motion_div" >
-            {/* <div className="h_scroll_end_text" style={{marginRight : '50vw'}}>
-              Every brand has a story waiting to be told. <br></br>
-Scroll down — your inspiration begins here.
-            </div> */}
-            {
-            cards_content.map( (card)=>{
-              return (
-                // < TarotCard key={card.card_index} card={card}   />
-                <TarotCard key={card.card_index} card={card} progress={scrollYProgress} />
+          {isMobile ? (
+  <div className="h_scroll_motion_div">
+    {cards_content.map(card => (
+      <TarotCard
+        key={card.card_index}
+        card={card}
+        isMobile
+      />
+    ))}
+  </div>
+) : (
+  <motion.div style={{ x }} className="h_scroll_motion_div">
+    {cards_content.map(card => (
+      <TarotCard
+        key={card.card_index}
+        card={card}
+        progress={scrollYProgress}
+      />
+    ))}
+  </motion.div>
+)}
 
-              )
-            })}
-
-            <div className="h_scroll_end_text">
-            End of this showcase.<br></br>
-Your next big idea might be in front of you <br></br>
-scroll and find it
-            </div>
-
-          </motion.div>
 
           
       </div>
