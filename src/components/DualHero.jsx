@@ -7,14 +7,14 @@ const isMobile = window.innerWidth < 900
 
 const teamMembers = [
   {
-    id: 3,
-    name: isMobile ? "STEP 1" : "STEP 3",
-    role: "Strategy & Ideation",
-    quote: "Insights from discovery and evaluation are transformed into a clear, actionable strategy.",
-    bio: `We define a structured direction that aligns with your brand vision and business goals.
-Creative ideas are developed with purpose, not guesswork, ensuring relevance and impact.
-Every concept is designed to communicate clearly, connect emotionally, and drive results.`,
-    imageUrl: "./Strategy_ideation.jpg",
+    id: 1,
+    name: "STEP 1",
+    role: "Discovery",
+    quote: "We begin by deeply understanding your brand its vision, values, personality, and market position.",
+    bio: `Your challenges are carefully analyzed to uncover real gaps, obstacles, and growth opportunities.
+We clearly define your business and communication goals to align creativity with results.
+This phase builds a strong foundation, ensuring every strategy and decision is intentional and effective.`,
+    imageUrl: "discovery.jpg",
   },
   {
     id: 2,
@@ -24,17 +24,17 @@ Every concept is designed to communicate clearly, connect emotionally, and drive
     bio: `What’s working is identified and strengthened to build on proven success.
 What’s not delivering results is analyzed to understand gaps and inefficiencies.
 Clear opportunities for improvement are defined, setting the stage for smarter, more effective solutions.`,
-    imageUrl: "./execution_optimization.jpg",
+    imageUrl: isMobile ? "./Evaluation.jpg" :  "./execution_optimization.jpg",
   },
   {
-    id: 1,
-    name: isMobile ? "STEP 3" : "STEP 1",
-    role: "Discovery",
-    quote: "We begin by deeply understanding your brand its vision, values, personality, and market position.",
-    bio: `Your challenges are carefully analyzed to uncover real gaps, obstacles, and growth opportunities.
-We clearly define your business and communication goals to align creativity with results.
-This phase builds a strong foundation, ensuring every strategy and decision is intentional and effective.`,
-    imageUrl: "discovery.jpg",
+    id: 3,
+    name: "STEP 3",
+    role: "Strategy & Ideation",
+    quote: "Insights from discovery and evaluation are transformed into a clear, actionable strategy.",
+    bio: `We define a structured direction that aligns with your brand vision and business goals.
+Creative ideas are developed with purpose, not guesswork, ensuring relevance and impact.
+Every concept is designed to communicate clearly, connect emotionally, and drive results.`,
+    imageUrl: "./Strategy_ideation.jpg",
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ This phase builds a strong foundation, ensuring every strategy and decision is i
     bio: `Each element is executed in alignment with the defined strategy and brand direction.
 Performance is continuously monitored using data-driven insights and real metrics.
 Based on results, we refine, optimize, and improve to maximize impact and long-term effectiveness`,
-    imageUrl: "./Evaluation.jpg",
+    imageUrl: isMobile ?  "./execution_optimization.jpg" :  "./Evaluation.jpg",
   }
 ];
 
